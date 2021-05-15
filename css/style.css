@@ -1,0 +1,568 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 1000;
+  font-family: 'HK-Grotesk', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: 'HK-Grotesk';
+  src: url('../fonts/HK-Grotesk/HKGrotesk-Black.otf');
+  src: url('../fonts/HK-Grotesk/HKGrotesk-Bold.otf');
+  src: url('../fonts/HK-Grotesk/HKGrotesk-ExtraBold.otf');
+  src: url('../fonts/HK-Grotesk/HKGrotesk-BoldLegacy.otf');
+  src: url('../fonts/HK-Grotesk/HKGrotesk-Light.otf');
+  src: url('../fonts/HK-Grotesk/HKGrotesk-LightLegacy.otf');
+  src: url('../fonts/HK-Grotesk/HKGrotesk-Medium.otf');
+  src: url('../fonts/HK-Grotesk/HKGrotesk-MediumLegacy.otf');
+  src: url('../fonts/HK-Grotesk/HKGrotesk-Regular.otf');
+  src: url('../fonts/HK-Grotesk/HKGrotesk-RegularLegacy.otf');
+  src: url('../fonts/HK-Grotesk/HKGrotesk-SemiBold.otf');
+  src: url('../fonts/HK-Grotesk/HKGrotesk-SemiBoldLegacy.otf');
+}
+
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  width: 8px;
+  z-index: 2;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-thumb {
+  background: #6B726F;
+  border-radius: 1rem;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar-track,
+html::-webkit-scrollbar-track {
+  background: #56BF98;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  height: 1200px;
+  background-image: url('../assets/Mask Group 5.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 70%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 10%;
+}
+
+nav a.brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  font-family: 'HK-Grotesk', sans-serif;
+}
+
+nav a.brand img {
+  height: 3rem;
+  width: 3rem;
+  margin-top: 0.5rem;
+}
+
+nav a.brand p {
+  margin-top: 0.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #56BF98;
+}
+
+nav li {
+  display: inline;
+}
+
+nav li a {
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  margin: 0 1.5rem;
+  font-family: 'HK-Grotesk', sans-serif;
+}
+
+nav button {
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  background: transparent;
+  font-family: 'Catamaran', sans-serif;
+  border-radius: 10px;
+  outline: none;
+  text-transform: uppercase;
+  font-family: 'HK-Grotesk', sans-serif;
+}
+
+.demo {
+  margin-right: -22.3rem;
+}
+
+.demo img {
+  width: 87%;
+}
+
+.signin {
+  margin-right: 2rem;
+  color: #56BF98;
+  border: 2px solid #56BF98;
+}
+
+.signup {
+  border: none;
+  background-color: #56bf98;
+  color: white;
+}
+
+.active {
+  border-bottom: 2px solid #56BF98;
+}
+
+.links {
+  margin-left: auto;
+}
+
+.container {
+  display: flex;
+  margin: 5rem 0 0 10%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container h1 {
+  font-size: 50px;
+  font-weight: bolder;
+  color: #6B726F;
+  font-family: 'HK-Grotesk', sans-serif;
+}
+
+.health {
+  color: #56BF98;
+  font-size: 50px;
+}
+
+.desc p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #6B726FBF;
+  margin-top: 2rem;
+  line-height: 1.5;
+  opacity: 50%;
+  font-family: 'HK-Grotesk', sans-serif;
+}
+
+.signup-btn {
+  padding: 0.7rem 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 15px;
+  outline: none;
+  font-family: 'Catamaran', sans-serif;
+  text-transform: uppercase;
+  background-color: #56bf98;
+  color: white;
+  border: none;
+  margin-top: 3rem;
+}
+
+.info {
+  margin: 4rem auto;
+  text-align: center;
+}
+
+.info p {
+  color: #56BF98;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.header-title {
+  color: #6B726F;
+  font-size: 48px;
+  font-weight: bolder;
+}
+
+.product {
+  color: #56BF98;
+  font-size: 48px;
+  font-weight: bolder;
+}
+
+.product-card {
+  padding: 0 10%;
+  margin: 10rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 3rem;
+}
+
+.product-card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+hr {
+  margin-top: 4rem;
+  width: 100px;
+  height: 3px;
+  background-color: #56BF98;
+  border-width: 0;
+}
+
+.product-card h4 {
+  padding: 2rem 0;
+  color: #6B726F;
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+.product-card p {
+  color: #6B726FBF;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.book-appointment {
+  padding: 0 10%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+
+.appointment {
+  margin-left: 5rem;
+}
+
+.appointment h2 {
+  color: #6B726F;
+  font-weight: bolder;
+  font-size: 48px;
+  margin-bottom: 2rem;
+}
+
+.docs {
+  color: #56BF98;
+}
+
+.appointment p {
+  font-weight: bold;
+  width: 70%;
+  font-size: 18px;
+  color: #6B726FBF;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.book {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: 'Catamaran', sans-serif;
+  border-radius: 15px;
+  outline: none;
+  text-transform: uppercase;
+  border: none;
+  background-color: #56bf98;
+  color: white;
+}
+
+/*.another-section {*/
+/*  background-image: url('../assets/Mask\ Group\ 6.svg');*/
+/*  background-repeat: no-repeat;*/
+/*  background-position: top left;*/
+/*  background-size: 70%;*/
+/*}*/
+
+.cert {
+  padding: 0 3%;
+  position: relative;
+  width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cert-course {
+  position: absolute;
+  object-fit: cover;
+  left: 0;
+  top: 15rem;
+  z-index: -1;
+}
+
+.earn {
+  margin-top: 20rem;
+  width: 40rem;
+}
+
+.earn h2 {
+  font-size: 36px;
+  color: #fff;
+}
+
+.earn p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.avata img {
+  margin-top: 18rem;
+}
+
+.go-to-courrse {
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: 'Catamaran', sans-serif;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  background-color: #fff;
+  color: #56bf98;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.learn-more {
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: 'Catamaran', sans-serif;
+  background: transparent;
+  border-radius: 15px;
+  outline: none;
+  border: 1px solid white;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.application-form {
+  padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20rem 0 10rem 0;
+}
+
+.apply h2 {
+  color: #6B726F;
+  font-weight: bolder;
+  font-size: 48px;
+  margin-bottom: 3rem;
+}
+
+.app {
+  color: #56BF98;
+}
+
+.apply p {
+  color: #6B726FBF;
+  font-size: 18px;
+  font-weight: bold;
+  width: 60%;
+  margin-bottom: 3rem;
+  line-height: 1.5;
+}
+
+.apply-doc {
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: 'Catamaran', sans-serif;
+  background: #56BF98;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  color: #fff;
+}
+
+footer {
+  padding-bottom: 20px;
+  height: 400px;
+  width: 100%;
+  background-color:  #22A5A4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  grid-template-columns: 1fr 1fr 1fr 30rem 1fr;
+}
+
+.brand-icon p {
+  color: white;
+  margin-top: 4rem;
+}
+
+.about ul,
+.social-icon ul {
+  margin-top: 2rem;
+}
+
+.about li a {
+  color: white;
+  line-height: 2;
+}
+
+.social-icon li a {
+  color: white;
+  line-height: 2;
+}
+
+.subscribe-form p {
+  color: white;
+  margin-bottom: 5rem;
+}
+
+.subscribe-form form input {
+  padding: 1rem 2rem;
+  background: transparent;
+  color: white;
+  border: 1px solid #FFFFFF;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  margin-right: 2rem;
+}
+
+.subscribe-form button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: 'Catamaran', sans-serif;
+  background: white;
+  border-radius: 0 4px 4px 0;
+  outline: none;
+  border: none;
+  color: #56BF98;
+}
+
+
+::placeholder {
+  color: white;
+}
+
+.address p {
+  color: white;
+  margin-top: 1rem;
+  line-height: 2;
+}
+
+.about{
+  margin : 20px;
+}
+.brand-icon{
+  margin-left: 30px;
+}
+
+/*-----  RESPONSIVE */
+@media only screen and (max-width: 600px) {
+  header {
+    height: 700px;
+    background-position: right top;
+    background-size: 50%;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    padding: 0 10%;
+  }
+
+  nav a.brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    font-family: 'HK-Grotesk', sans-serif;
+  }
+
+  nav a.brand img {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-size: 5px;
+    color: #56BF98;
+  }
+
+  nav li {
+    display: flex;
+  }
+
+  nav li a {
+    font-size: 5px;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    margin: 0 1.5rem;
+    font-family: 'HK-Grotesk', sans-serif;
+  }
+
+  nav button {
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 9px;
+    line-height: 1;
+    background: transparent;
+    font-family: 'Catamaran', sans-serif;
+    border-radius: 10px;
+    outline: none;
+    text-transform: uppercase;
+  }
+  .subscribe-form p {
+    color: white;
+    margin-bottom: 4rem;
+  }
+.subscribe-form{
+  margin-left: 12px
+}
+}
+
